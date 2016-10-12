@@ -6,21 +6,22 @@
 <link rel="stylesheet" href="./css/bootstrap-theme.min.css" />
 <script src="./js/bootstrap.min.js"></script>
 <script src="./js/angular.min.js"></script>
+<script src="./js/genLabelClientRequest.js"></script>
 </head>
 <body>
 
 <nav class="navbar navbar-inverse navbar-fixed-top">
- <a class="navbar-brand" href="#">rew0rk/canterlot/genLabel</a>
+ <a class="navbar-brand" href="">rew0rk/canterlot/genLabel</a>
 </nav>
 
-<div class="container">
- <form class="form-signin" name="genLabel" ng-submit="genLabelRequest()">
+<div class="container" ng-app="genLabel" ng-controller=genLabelController>
+ <form class="form-signin" name="genLabel">
   <h3 class="form-signin-heading">Create Label</h3>
   <label>Label Title</label>
-  <input ng-model="genLabel.docTitle" type="text" id="docTitle" class="form-control" placeholder="Top Label eg: SELL BY" required value="SELL BY"></input>
+  <input ng-model="docTitle" type="text" class="form-control" placeholder="Top Label eg: SELL BY" required value="SELL BY"></input>
   <label>Label Data</label>
-  <input ng-model="genLabel.docPayload" type="text" id="docPayload" class="form-control" placeholder="99/99/99" required autofocus></input>
-  <button class="btn btn-lg btn-primary btn-block" type="submit">Create Label</button>
+  <input ng-model="docPayload" type="text" class="form-control" placeholder="99/99/99" required autofocus value="99/99/99"></input>
+  <button ng-click="requestPDF()" class="btn btn-lg btn-primary btn-block" type="submit">Create Label</button>
  </form>
 </div>
 </body>

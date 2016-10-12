@@ -9,10 +9,11 @@
 var env = require("./config.js");
 var express = require("express");
 var bodyParser = require("body-parser");
-var fs = require("fs"); //truncated, dont need anymore
-var blobStream = require("blob-stream");
+var fs = require("fs"); //writing to /tmp
+//var blobStream = require("blob-stream");
 var path = require("path"); //apparently i need __dirname, no relative roots
 var PDFDocument = require("pdfkit");
+var randToken = require("rand-token");
 
 var app = express();
 
@@ -22,6 +23,7 @@ var app = express();
  ****************************************
  */
 
+/*
 doc = new PDFDocument(
  { //72.00 - 1 inch, 108.00 - 1.5 inch?
   size:[108.00,72.00],
@@ -29,7 +31,7 @@ doc = new PDFDocument(
  }
 );
 doc.fontSize(18);
-
+*/
 
 ///////////////////////////////////////////
 
@@ -41,24 +43,32 @@ app.listen(env.port,function() {
  console.log("Tommy Rojo -- tommy.rojo@stu.bmcc.cuny.edu");
  console.log("[INFO] Starting genLabel daemon on port: " + env.port);
 });
-/*
-app.route("/")
- .get(function(req,res){
-   res.sendFile(path.join(__dirname+"/views/index.html"));
- }
-); //end .get request
-*/
 
 app.use("/", express.static("./views"));
 
 app.post("/genLabel", function(req,res) {
  console.log("/genLabel query:", req.body);
- genPdf(doc, blobStream, req.body.docTitle,req.body.docPayload); //make sure to change this, do i need a callback?
- res.send(req.body);
+ //res.send(genPdf(doc, req.body.docTitle,req.body.docPayload)); //make sure to change this, do i need a callback?
+doc = new PDFDocument(
+ { //72.00 - 1 inch, 108.00 - 1.5 inch?
+  size:[108.00,72.00],
+  margin:10
+ }
+);
+doc.fontSize(18);
+
+  doc.text(req.body.docTitle, { //First line
+  align:'center'
+ });
+ doc.text(req.body.docPayload, {
+  align:'center'
+ });
+ doc.pipe(res);
+ doc.end();
 
 });
 
-function genPdf(doc, blobStream, docTitle, docPayload, callback) {
+function genPdf(doc, docTitle, docPayload, callback) {
  console.log("genPdf() Payload: ", docTitle, docPayload);
  doc.text(docTitle, { //First line
   align:'center'
@@ -66,14 +76,14 @@ function genPdf(doc, blobStream, docTitle, docPayload, callback) {
  doc.text(docPayload, {
   align:'center'
  });
-
- stream = doc.pipe(blobStream())
- //console.log("STREAM", stream);
- doc.end()
-
- stream.on('finish', function(){
-  blob = stream.toBlob('application/pdf')
-  url = stream.toBlobURL('application/pdf')
-  iframe.src = url;
- });
+ var outFilename = randToken.generate(32);
+ var outPath = ("/tmp/genLabel/" + outFilename + ".pdf");
+ writeStream = fs.createWriteStream(outPath);
+  console.log(outPath);
+ //doc.pipe(writeStream);
+ doc.end();
+ writeStream.on('finish', function() { });
+ //doc.end();
+ 
+ return doc.pipe();
 }
