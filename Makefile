@@ -1,0 +1,2 @@
+all:
+	nodemon genLabel.js

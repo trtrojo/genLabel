@@ -1,0 +1,17 @@
+{
+  "name": "genlabel",
+  "version": "1.0.0",
+  "description": "Generates labels for printing on zebra equipment",
+  "main": "genLabel.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tommy Rojo",
+  "license": "ISC",
+  "dependencies":{
+   "express":"^4.13.4",
+   "pdfkit":"0.8.0",
+   "body-parser":"*",
+   "blob-stream":"^0.1.3"
+  }
+}
