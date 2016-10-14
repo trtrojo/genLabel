@@ -46,10 +46,9 @@ app.listen(env.port,function() {
 
 app.use("/", express.static("./views"));
 
-app.post("/genLabel", function(req,res) {
- console.log("/genLabel query:", req.body);
- //res.send(genPdf(doc, req.body.docTitle,req.body.docPayload)); //make sure to change this, do i need a callback?
-doc = new PDFDocument(
+app.get("/genLabel", function(req,res) {
+ console.log("/genLabel query:", req.query);
+ doc = new PDFDocument(
  { //72.00 - 1 inch, 108.00 - 1.5 inch?
   size:[108.00,72.00],
   margin:10
@@ -57,10 +56,10 @@ doc = new PDFDocument(
 );
 doc.fontSize(18);
 
-  doc.text(req.body.docTitle, { //First line
+  doc.text(req.query.docTitle, { //First line
   align:'center'
  });
- doc.text(req.body.docPayload, {
+ doc.text(req.query.docPayload, {
   align:'center'
  });
  doc.pipe(res);

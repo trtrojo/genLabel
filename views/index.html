@@ -11,17 +11,17 @@
 <body>
 
 <nav class="navbar navbar-inverse navbar-fixed-top">
- <a class="navbar-brand" href="">rew0rk/canterlot/genLabel</a>
+ <a class="navbar-brand" href="">rew0rk / canterlot / genLabel</a>
 </nav>
 
-<div class="container" ng-app="genLabel" ng-controller=genLabelController>
- <form class="form-signin" name="genLabel">
+<div class="container" ng-app="genLabel" ng-controller="GenLabelController">
+ <form class="form-signin">
   <h3 class="form-signin-heading">Create Label</h3>
   <label>Label Title</label>
-  <input ng-model="docTitle" type="text" class="form-control" placeholder="Top Label eg: SELL BY" required value="SELL BY"></input>
+  <input ng-model="label.docTitle" type="text" class="form-control" placeholder="Top Label eg: SELL BY" required value="SELL BY" />
   <label>Label Data</label>
-  <input ng-model="docPayload" type="text" class="form-control" placeholder="99/99/99" required autofocus value="99/99/99"></input>
-  <button ng-click="requestPDF()" class="btn btn-lg btn-primary btn-block" type="submit">Create Label</button>
+  <input ng-model="label.docPayload" type="text" class="form-control" placeholder="99/99/99" required autofocus value="99/99/99" />
+  <button ng-click="requestPDF(label)" class="btn btn-lg btn-primary btn-block" type="submit">Create Label</button>
  </form>
 </div>
 </body>
