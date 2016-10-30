@@ -40,7 +40,7 @@ app.use(bodyParser.urlencoded({ extended:"true" }));
 
 app.listen(env.port,function() {
  console.log("genLabel -- PDF Generator for zebra label makers");
- console.log("Tommy Rojo -- tommy.rojo@stu.bmcc.cuny.edu");
+ console.log("Tommy Rojo -- tommy.rojo@eataly.com");
  console.log("[INFO] Starting genLabel daemon on port: " + env.port);
 });
 
