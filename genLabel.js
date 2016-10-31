@@ -54,7 +54,12 @@ app.get("/genLabel", function(req,res) {
   margin:10
  }
 );
+
+if (typeof req.query.fontSize !== 'undefined') {
+ doc.fontSize(req.query.fontSize);
+} else {
 doc.fontSize(18);
+}
 
   doc.text(req.query.docTitle, { //First line
   align:'center'
