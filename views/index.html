@@ -8,7 +8,7 @@
 <script src="./js/angular.min.js"></script>
 <!--<script src="./js/genLabelClientRequest.js"></script>-->
 <script>
-function createLabel() { window.open("genLabel?docTitle=" + document.genLabel.docTitle.value + "&docPayload=" + document.genLabel.docPayload.value,null) }
+function createLabel() { window.open("genLabel?docTitle=" + document.genLabel.docTitle.value + "&docPayload=" + document.genLabel.docPayload.value + "&docBarcode=" + document.genLabel.docBarcode.value,null) }
 </script>
 </head>
 <body>
@@ -24,6 +24,8 @@ function createLabel() { window.open("genLabel?docTitle=" + document.genLabel.do
   <input name="docTitle" ng-model="label.docTitle" type="text" class="form-control" placeholder="Top Label eg: SELL BY" required value="SELL BY" />
   <label>Label Data</label>
   <input name="docPayload" ng-model="label.docPayload" type="text" class="form-control" placeholder="99/99/99" required autofocus value="" />
+  <label>Barcode</label>
+  <input name="docBarcode" ng-model="label.docBarcode" type="text" class="form-control" placeholder="12345678" />
   <!--<button ng-click="requestPDF(label)" class="btn btn-lg btn-primary btn-block" type="submit">Create Label</button>-->
 
   <button onClick="createLabel()" class="btn btn-lg btn-primary btn-block" type="submit">Create Label</button>

@@ -12,6 +12,7 @@
    "express":"^4.13.4",
    "pdfkit":"0.8.0",
    "body-parser":"*",
-   "rand-token":"^0.2.1"
+   "rand-token":"^0.2.1",
+   "barcode":"^0.1.0"
   }
 }
