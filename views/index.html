@@ -8,7 +8,7 @@
 <script src="./js/angular.min.js"></script>
 <!--<script src="./js/genLabelClientRequest.js"></script>-->
 <script>
-function createLabel() { window.open("genLabel?docTitle=" + document.genLabel.docTitle.value + "&docPayload=" + document.genLabel.docPayload.value + "&docBarcode=" + document.genLabel.docBarcode.value,null) }
+function createLabel() { window.open("genLabel?line1=" + document.genLabel.line1.value + "&line2=" + document.genLabel.line2.value + "&line3=" + document.genLabel.line3.value + "&barcode=" + document.genLabel.barcode.value,null) }
 </script>
 </head>
 <body>
@@ -20,12 +20,14 @@ function createLabel() { window.open("genLabel?docTitle=" + document.genLabel.do
 <div class="container" ng-app="genLabel" ng-controller="GenLabelController">
  <form name="genLabel" class="form-signin">
   <h3 class="form-signin-heading">Create Label</h3>
-  <label>Label Title</label>
-  <input name="docTitle" ng-model="label.docTitle" type="text" class="form-control" placeholder="Top Label eg: SELL BY" required value="SELL BY" />
-  <label>Label Data</label>
-  <input name="docPayload" ng-model="label.docPayload" type="text" class="form-control" placeholder="99/99/99" required autofocus value="" />
+  <label>First Line</label>
+  <input name="line1" ng-model="label.line1" type="text" class="form-control" placeholder="Top Label eg: SELL BY" autofocus value="" />
+  <label>Line 2</label>
+  <input name="line2" ng-model="label.line2" type="text" class="form-control" placeholder="99/99/99" value="" />
+  <label>Line 3</label>
+  <input name="line3" ng-model="line3" type="text" class="form-control" placeholder="12345678" />
   <label>Barcode</label>
-  <input name="docBarcode" ng-model="label.docBarcode" type="text" class="form-control" placeholder="12345678" />
+  <input name="barcode" ng-model="barcode" type="text" class="form-control" required placeholder="000000" />
   <!--<button ng-click="requestPDF(label)" class="btn btn-lg btn-primary btn-block" type="submit">Create Label</button>-->
 
   <button onClick="createLabel()" class="btn btn-lg btn-primary btn-block" type="submit">Create Label</button>
