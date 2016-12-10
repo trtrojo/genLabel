@@ -14,17 +14,24 @@
 $.getJSON("template.json", function(json) {
     template = json;
     console.log("Loaded Template Version: " + json.revision);
+     $.each(json.items, function(i, value) {
+      $('select').append($('<option>').text(value.name).attr('value',i));
+     });
+
 });
 
 function createLabel() { window.open("genLabel?line1=" + document.genLabel.line1.value + "&line2=" + document.genLabel.line2.value + "&line3=" + document.genLabel.line3.value + "&barcode=" + document.genLabel.barcode.value,null) }
 
 function updateForm(valueArray) {
+ valueArray = template.items[valueArray.value];
+
  if (valueArray.line1Enable) { document.genLabel.line1.value = valueArray.line1; }
- document.genLabel.line2.value = valueArray.line2;
- document.genLabel.line3.value = valueArray.line3;
- document.genLabel.barcode.value = valueArray.lineBarcode;
+ if (valueArray.line2Enable) { document.genLabel.line2.value = valueArray.line2; }
+ if (valueArray.line3Enable) { document.genLabel.line3.value = valueArray.line3; }
+ if (valueArray.lineBarcodeEnable) { document.genLabel.barcode.value = valueArray.lineBarcode; }
 
 }
+
 </script>
 </head>
 <body>
@@ -35,7 +42,9 @@ function updateForm(valueArray) {
 
  
 <div class="container">
- <select><option value="1">Test</option></select>
+ <select onchange="updateForm(this);">
+  <option value="">Select from template</option>
+ </select>
  <form name="genLabel" class="form-signin">
   <h3 class="form-signin-heading">Create Label</h3>
   <label>First Line</label>

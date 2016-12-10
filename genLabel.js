@@ -18,6 +18,11 @@
  var app = express();
 
 
+
+var dir = '/tmp/barcode';
+ if (!fs.existsSync(dir)){
+  fs.mkdirSync(dir);
+}
  /****************************************
   * Begin PDFKit Configuration (1x1.5 sticky label)
   ****************************************
@@ -42,16 +47,17 @@
    if ((typeof req.query.barcode == 'undefined') || (req.query.barcode != '')) {
      console.log("req.query.barcode: " + req.query.barcode.length);
      console.log(req.query);
+     var barcodeFileName = md5(req.query.barcode); 
      var c128Image = barcode('code128', {
        data: req.query.barcode,
        width: 400,
        height: 50
      });
-     c128Image.saveImage("/tmp/barcode/barcode.PNG", function(err) {
+     c128Image.saveImage(urljoin(dir,barcodeFileName), function(err) {
        if (err) throw err;
        console.log("PLEASE FOR THE LOVE OF GOD FIX THE PROBLEM ON LINE 62");
 
-       makePdf(req, res, '/tmp/barcode/barcode.PNG', req.query.barcode)
+       makePdf(req, res, urljoin(dir,barcodeFileName), req.query.barcode)
 
        //need to put callback here to wait for whatever
      });
