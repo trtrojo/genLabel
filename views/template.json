@@ -1,0 +1,60 @@
+{
+   "revision" : "20161205",
+   "items":[
+      {
+         "name":"Arcadian Dozen Eggs (Blue Box)",
+         "line1":"ARCDN PSTRS LARGE EGGS 1 DZ",
+         "line1Enable":true,
+         "line2":"$99.99",
+         "line2Enable":false,
+         "line3":"SELL BY:",
+         "line3Enable":true,
+         "lineBarcode":"1109723",
+         "lineBarcodeEnable":true
+      },
+      {
+         "name":"Arcadian HALF Dozen Eggs (Blue Box white label)",
+         "line1":"ARCDN PSTRS LARGE EGGS 1/2DZ",
+         "line1Enable":true,
+         "line2":"$99.99",
+         "line2Enable":false,
+         "line3":"SELL BY:",
+         "line3Enable":true,
+         "lineBarcode":"1109503",
+         "lineBarcodeEnable":true
+      },
+      {
+         "name":"Ploughgate Salted Butter (Red Label)",
+         "line1":"PLOUGHGATE CREAMERY SALTED BUTTER",
+         "line1Enable":true,
+         "line2":"$99.99",
+         "line2Enable":false,
+         "line3":"SELL BY:",
+         "line3Enable":true,
+         "lineBarcode":"1104325",
+         "lineBarcodeEnable":true
+      },
+      {
+         "name":"Ploughgate Unsalted Butter (Yellow Label)",
+         "line1":"PLOUGHGATE UNSALTED BUTTER 8OZ",
+         "line1Enable":true,
+         "line2":"$99.99",
+         "line2Enable":false,
+         "line3":"SELL BY:",
+         "line3Enable":true,
+         "lineBarcode":"1109285",
+         "lineBarcodeEnable":true
+      },
+      {
+         "name":"Farmstead Buttermilk Qt (White bottle Red top)",
+         "line1":"FARMSTEAD BUTTERMILK QT",
+         "line1Enable":true,
+         "line2":"$99.99",
+         "line2Enable":false,
+         "line3":"SELL BY:",
+         "line3Enable":true,
+         "lineBarcode":"1104324",
+         "lineBarcodeEnable":true
+      }
+   ]
+}

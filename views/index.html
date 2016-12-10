@@ -4,11 +4,27 @@
 <script src="./js/jquery-3.1.1.min.js"></script>
 <link rel="stylesheet" href="./css/bootstrap.min.css" />
 <link rel="stylesheet" href="./css/bootstrap-theme.min.css" />
+<link rel="stylesheet" href="./css/app.css" />
 <script src="./js/bootstrap.min.js"></script>
-<script src="./js/angular.min.js"></script>
+<!--<script src="./js/angular.min.js"></script>-->
+<!--<script src="./template.json"></script>-->
 <!--<script src="./js/genLabelClientRequest.js"></script>-->
 <script>
+
+$.getJSON("template.json", function(json) {
+    template = json;
+    console.log("Loaded Template Version: " + json.revision);
+});
+
 function createLabel() { window.open("genLabel?line1=" + document.genLabel.line1.value + "&line2=" + document.genLabel.line2.value + "&line3=" + document.genLabel.line3.value + "&barcode=" + document.genLabel.barcode.value,null) }
+
+function updateForm(valueArray) {
+ if (valueArray.line1Enable) { document.genLabel.line1.value = valueArray.line1; }
+ document.genLabel.line2.value = valueArray.line2;
+ document.genLabel.line3.value = valueArray.line3;
+ document.genLabel.barcode.value = valueArray.lineBarcode;
+
+}
 </script>
 </head>
 <body>
@@ -17,17 +33,19 @@ function createLabel() { window.open("genLabel?line1=" + document.genLabel.line1
  <a class="navbar-brand" href="">rew0rk / canterlot / genLabel</a>
 </nav>
 
-<div class="container" ng-app="genLabel" ng-controller="GenLabelController">
+ 
+<div class="container">
+ <select><option value="1">Test</option></select>
  <form name="genLabel" class="form-signin">
   <h3 class="form-signin-heading">Create Label</h3>
   <label>First Line</label>
-  <input name="line1" ng-model="label.line1" type="text" class="form-control" placeholder="Top Label eg: SELL BY" autofocus value="" />
+  <input name="line1" ng-model="label.line1" type="text" class="form-control" placeholder="Name (Eg: Arcadian Dozen Eggs)" autofocus value="" />
   <label>Line 2</label>
-  <input name="line2" ng-model="label.line2" type="text" class="form-control" placeholder="99/99/99" value="" />
+  <input name="line2" ng-model="label.line2" type="text" class="form-control" placeholder="Second Line" value="" />
   <label>Line 3</label>
-  <input name="line3" ng-model="line3" type="text" class="form-control" placeholder="12345678" />
+  <input name="line3" ng-model="line3" type="text" class="form-control" placeholder="Third Line (eg: SELL BY: 1/1/99)" />
   <label>Barcode</label>
-  <input name="barcode" ng-model="barcode" type="text" class="form-control" required placeholder="000000" />
+  <input name="barcode" ng-model="barcode" type="text" class="form-control" required placeholder="Catapult Item ID (eg: 52114)" />
   <!--<button ng-click="requestPDF(label)" class="btn btn-lg btn-primary btn-block" type="submit">Create Label</button>-->
 
   <button onClick="createLabel()" class="btn btn-lg btn-primary btn-block" type="submit">Create Label</button>

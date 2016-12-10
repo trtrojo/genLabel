@@ -13,6 +13,8 @@
    "pdfkit":"0.8.0",
    "body-parser":"*",
    "rand-token":"^0.2.1",
-   "barcode":"^0.1.0"
+   "barcode":"^0.1.0",
+   "url-join":"^1.1.0",
+   "md5":"^2.2.1"
   }
 }

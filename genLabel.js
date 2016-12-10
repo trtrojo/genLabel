@@ -12,6 +12,8 @@
  var PDFDocument = require("pdfkit");
  var randToken = require("rand-token");
  var barcode = require('barcode');
+ var urljoin = require('url-join');
+ var md5 = require('md5');
 
  var app = express();
 
@@ -35,8 +37,9 @@
  app.use("/", express.static("./views"));
 
  app.get("/genLabel", function(req, res) {
+ console.log("DEBUG: ", req.query);
 
-   if (!(typeof req.query.barcode == 'undefined')) {
+   if ((typeof req.query.barcode == 'undefined') || (req.query.barcode != '')) {
      console.log("req.query.barcode: " + req.query.barcode.length);
      console.log(req.query);
      var c128Image = barcode('code128', {
@@ -44,11 +47,11 @@
        width: 400,
        height: 50
      });
-     c128Image.saveImage("/tmp/barcode.PNG", function(err) {
+     c128Image.saveImage("/tmp/barcode/barcode.PNG", function(err) {
        if (err) throw err;
        console.log("PLEASE FOR THE LOVE OF GOD FIX THE PROBLEM ON LINE 62");
 
-       makePdf(req, res, '/tmp/barcode.PNG', req.query.barcode)
+       makePdf(req, res, '/tmp/barcode/barcode.PNG', req.query.barcode)
 
        //need to put callback here to wait for whatever
      });
