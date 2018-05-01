@@ -1,28 +1,6 @@
 {
-   "revision" : "20161205",
+   "revision" : "20180501",
    "items":[
-      {
-         "name":"Arcadian Dozen Eggs (Blue Box)",
-         "line1":"ARCDN PSTRS LARGE EGGS 1 DZ",
-         "line1Enable":true,
-         "line2":"$99.99",
-         "line2Enable":false,
-         "line3":"SELL BY:",
-         "line3Enable":true,
-         "lineBarcode":"1109723",
-         "lineBarcodeEnable":true
-      },
-      {
-         "name":"Arcadian HALF Dozen Eggs (Blue Box white label)",
-         "line1":"ARCDN PSTRS LARGE EGGS 1/2DZ",
-         "line1Enable":true,
-         "line2":"$99.99",
-         "line2Enable":false,
-         "line3":"SELL BY:",
-         "line3Enable":true,
-         "lineBarcode":"1109503",
-         "lineBarcodeEnable":true
-      },
       {
          "name":"Ploughgate Salted Butter (Red Label)",
          "line1":"PLOUGHGATE CREAMERY SALTED BUTTER",
@@ -52,9 +30,109 @@
          "line2":"$99.99",
          "line2Enable":false,
          "line3":"SELL BY:",
-         "line3Enable":true,
+         "line3Enable":false,
          "lineBarcode":"1104324",
          "lineBarcodeEnable":true
+      },
+      {
+	"name":"DELITIA",
+	"line1":"BUFFALO MILK BUTTER 8 OZ",
+	"line1Enable":true,
+	"line2":"",
+	"line2Enable":false,
+	"line3":"SELL BY:",
+	"line3Enable":true,
+	"lineBarcode":"800921",
+	"lineBarcodeEnable":true
+      },
+      {
+	"name":"MADAIO STRAWBERRY BUFFALO YOGURT (RED LABEL)",
+	"line1":"C. MADAIO",
+	"line1Enable":true,
+	"line2":"STRAWBERRY BUFFALO YOGURT",
+	"line2Enable":true,
+	"line3":"SELL BY:",
+	"line3Enable":false,
+	"lineBarcode":"519411",
+	"lineBarcodeEnable":true
+      },
+      {
+	"name":"MADAIO PLAIN BUFFALO YOGURT (BLUE LABEL)",
+	"line1":"C. MADAIO",
+	"line1Enable":true,
+	"line2":"BUFFALO YOGURT",
+	"line2Enable":true,
+	"line3":"SELL BY:",
+	"line3Enable":false,
+	"lineBarcode":"513228",
+	"lineBarcodeEnable":true
+      },
+      {
+	"name":"MADAIO LEMON YOGURT (GREEN LABEL)",
+	"line1":"C. MADAIO",
+	"line1Enable":true,
+	"line2":"LEMON BUFFALO YOGURT",
+	"line2Enable":false,
+	"line3":"SELL BY:",
+	"line3Enable":false,
+	"lineBarcode":"1110696",
+	"lineBarcodeEnable":true
+      },
+      {
+	"name":"URBANI WHITE TRUFFLE BUTTER (GOLD LABEL)",
+	"line1":"URBANI",
+	"line1Enable":true,
+	"line2":"WHITE TRUFFLE BUTTER",
+	"line2Enable":true,
+	"line3":"SELL BY:",
+	"line3Enable":true,
+	"lineBarcode":"507609",
+	"lineBarcodeEnable":true
+      },
+      {
+	"name":"URBANI BLACK TRUFFLE BUTTER (BLACK LABEL)",
+	"line1":"URBANI",
+	"line1Enable":true,
+	"line2":"BLACK TRUFFLE BUTTER",
+	"line2Enable":true,
+	"line3":"SELL BY:",
+	"line3Enable":true,
+	"lineBarcode":"507611",
+	"lineBarcodeEnable":true
+      },
+      {
+	"name":"MOSER BUURE WEICHKALSI (CHEESE)",
+	"line1":"MOSER",
+	"line1Enable":true,
+	"line2":"BUURE WEICHKALSI",
+	"line2Enable":true,
+	"line3":"SELL BY:",
+	"line3Enable":true,
+	"lineBarcode":"1122790",
+	"lineBarcodeEnable":true
+      },
+      {
+	"name":"MOSER MINI TRUFFLE (CHEESE)",
+	"line1":"MOSER",
+	"line1Enable":true,
+	"line2":"MINI TRUFFLE",
+	"line2Enable":true,
+	"line3":"SELL BY:",
+	"line3Enable":true,
+	"lineBarcode":"1123148",
+	"lineBarcodeEnable":true
+      },
+      {
+	"name":"MOSER MINI MOSTRADO (CHEESE)",
+	"line1":"MOSER",
+	"line1Enable":true,
+	"line2":"MINI MOSTRADO",
+	"line2Enable":true,
+	"line3":"SELL BY:",
+	"line3Enable":true,
+	"lineBarcode":"1123150",
+	"lineBarcodeEnable":true
       }
+
    ]
 }
