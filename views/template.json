@@ -35,10 +35,10 @@
          "lineBarcodeEnable":true
       },
       {
-	"name":"DELITIA",
-	"line1":"BUFFALO MILK BUTTER 8 OZ",
+	"name":"Delitia Buffalo Milk Butter (Julian Calandar Datecode, set 1yr Expiration)",
+	"line1":"DELITIA",
 	"line1Enable":true,
-	"line2":"",
+	"line2":"BUFFALO MILK BUTTER 8 OZ",
 	"line2Enable":false,
 	"line3":"SELL BY:",
 	"line3Enable":true,
@@ -46,7 +46,7 @@
 	"lineBarcodeEnable":true
       },
       {
-	"name":"MADAIO STRAWBERRY BUFFALO YOGURT (RED LABEL)",
+	"name":"Madaio Strawberry Buffalo Yogurt (Red Label)",
 	"line1":"C. MADAIO",
 	"line1Enable":true,
 	"line2":"STRAWBERRY BUFFALO YOGURT",
@@ -57,7 +57,7 @@
 	"lineBarcodeEnable":true
       },
       {
-	"name":"MADAIO PLAIN BUFFALO YOGURT (BLUE LABEL)",
+	"name":"Madaio Buffalo Yogurt (Blue Label)",
 	"line1":"C. MADAIO",
 	"line1Enable":true,
 	"line2":"BUFFALO YOGURT",
@@ -68,7 +68,7 @@
 	"lineBarcodeEnable":true
       },
       {
-	"name":"MADAIO LEMON YOGURT (GREEN LABEL)",
+	"name":"Madaio Lemon Yogurt (Green Label)",
 	"line1":"C. MADAIO",
 	"line1Enable":true,
 	"line2":"LEMON BUFFALO YOGURT",
@@ -79,7 +79,7 @@
 	"lineBarcodeEnable":true
       },
       {
-	"name":"URBANI WHITE TRUFFLE BUTTER (GOLD LABEL)",
+	"name":"Urbani White Truffle Butter (Gold Label)",
 	"line1":"URBANI",
 	"line1Enable":true,
 	"line2":"WHITE TRUFFLE BUTTER",
