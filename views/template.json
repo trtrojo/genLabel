@@ -39,7 +39,7 @@
 	"line1":"DELITIA",
 	"line1Enable":true,
 	"line2":"BUFFALO MILK BUTTER 8 OZ",
-	"line2Enable":false,
+	"line2Enable":true,
 	"line3":"SELL BY:",
 	"line3Enable":true,
 	"lineBarcode":"800921",
