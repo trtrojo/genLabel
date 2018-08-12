@@ -72,7 +72,7 @@
 	"line1":"C. MADAIO",
 	"line1Enable":true,
 	"line2":"LEMON BUFFALO YOGURT",
-	"line2Enable":false,
+	"line2Enable":true,
 	"line3":"SELL BY:",
 	"line3Enable":false,
 	"lineBarcode":"1110696",
