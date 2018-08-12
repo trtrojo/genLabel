@@ -90,7 +90,7 @@
 	"lineBarcodeEnable":true
       },
       {
-	"name":"URBANI BLACK TRUFFLE BUTTER (BLACK LABEL)",
+	"name":"Urbani Black Truffle Butter (Black Label)",
 	"line1":"URBANI",
 	"line1Enable":true,
 	"line2":"BLACK TRUFFLE BUTTER",
@@ -101,7 +101,18 @@
 	"lineBarcodeEnable":true
       },
       {
-	"name":"MOSER BUURE WEICHKALSI (CHEESE)",
+	"name":"Kinderhook Eggs",
+	"line1":"KINDERHOOK FARM",
+	"line1Enable":true,
+	"line2":"EGGS, FREE RANGE",
+	"line2Enable":true,
+	"line3":"SELL BY: ",
+	"line3Enable":true,
+	"lineBarcode":"1128756",
+	"lineBarcodeEnable":true
+      },
+      {
+	"name":"Moser Buure Weichkalsi (Cheese)",
 	"line1":"MOSER",
 	"line1Enable":true,
 	"line2":"BUURE WEICHKALSI",
@@ -112,7 +123,7 @@
 	"lineBarcodeEnable":true
       },
       {
-	"name":"MOSER MINI TRUFFLE (CHEESE)",
+	"name":"Moser Mini Truffle (Cheese)",
 	"line1":"MOSER",
 	"line1Enable":true,
 	"line2":"MINI TRUFFLE",
@@ -123,7 +134,7 @@
 	"lineBarcodeEnable":true
       },
       {
-	"name":"MOSER MINI MOSTRADO (CHEESE)",
+	"name":"Moser Mini Mostrado (Cheese)",
 	"line1":"MOSER",
 	"line1Enable":true,
 	"line2":"MINI MOSTRADO",
